@@ -11,6 +11,44 @@ body {
   color: #333;
 }
 
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.95), rgba(255, 20, 147, 0.95));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  animation: welcomeGlow 1.2s ease-out forwards;
+}
+
+.welcome-overlay--hide {
+  animation: welcomeFade 0.8s ease forwards;
+}
+
+.welcome-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+  transform: scale(0.95);
+  animation: welcomePop 1s ease-out forwards;
+}
+
+.welcome-title {
+  color: #ff1493;
+  font-size: 36px;
+  margin-bottom: 10px;
+  animation: titleFloat 1.4s ease-in-out infinite;
+}
+
+.welcome-subtitle {
+  color: #b02c6f;
+  font-size: 18px;
+  animation: subtitleFade 1.8s ease-in-out infinite;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -396,6 +434,56 @@ footer {
   text-align: center;
   padding: 20px;
   margin-top: 60px;
+}
+
+@keyframes welcomeGlow {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes welcomePop {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes welcomeFade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes titleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes subtitleFade {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 /* Responsive */
