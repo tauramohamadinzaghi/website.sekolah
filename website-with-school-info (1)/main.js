@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.querySelector(".welcome-overlay")
   if (!overlay) return
 
-  document.body.classList.add("welcome-active")
-
   const hideOverlay = () => {
     overlay.classList.add("welcome-overlay--hide")
   }
@@ -12,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (overlay.parentElement) {
       overlay.remove()
     }
-    document.body.classList.remove("welcome-active")
   }
 
   setTimeout(hideOverlay, 1600)

@@ -6,9 +6,9 @@
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background: #ffffff;
+  background: #f7f7fb;
   min-height: 100vh;
-  color: #2d2d2d;
+  color: #2b2b2b;
 }
 
 body.welcome-active {
@@ -18,7 +18,7 @@ body.welcome-active {
 .welcome-overlay {
   position: fixed;
   inset: 0;
-  background: radial-gradient(circle at top, #fff5f9 0%, #ffffff 55%, #fff0f6 100%);
+  background: linear-gradient(135deg, rgba(255, 114, 179, 0.95), rgba(255, 47, 149, 0.95));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,23 +34,61 @@ body.welcome-active {
 
 .welcome-card {
   text-align: center;
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
   padding: 30px 40px;
   border-radius: 20px;
-  box-shadow: 0 18px 40px rgba(30, 20, 60, 0.12);
+  box-shadow: 0 12px 30px rgba(32, 24, 60, 0.2);
   transform: scale(0.95);
   animation: welcomePop 1s ease-out forwards;
 }
 
 .welcome-title {
-  color: #e63b8f;
+  color: #ff2f95;
   font-size: 36px;
   margin-bottom: 10px;
   animation: titleFloat 1.4s ease-in-out infinite;
 }
 
 .welcome-subtitle {
-  color: #6b6b6b;
+  color: #aa2b6b;
+  font-size: 18px;
+  animation: subtitleFade 1.8s ease-in-out infinite;
+}
+
+.welcome-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 105, 180, 0.95), rgba(255, 20, 147, 0.95));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3000;
+  animation: welcomeGlow 1.2s ease-out forwards;
+}
+
+.welcome-overlay--hide {
+  animation: welcomeFade 0.8s ease forwards;
+}
+
+.welcome-card {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(255, 20, 147, 0.4);
+  transform: scale(0.95);
+  animation: welcomePop 1s ease-out forwards;
+}
+
+.welcome-title {
+  color: #ff1493;
+  font-size: 36px;
+  margin-bottom: 10px;
+  animation: titleFloat 1.4s ease-in-out infinite;
+}
+
+.welcome-subtitle {
+  color: #b02c6f;
   font-size: 18px;
   animation: subtitleFade 1.8s ease-in-out infinite;
 }
@@ -64,7 +102,7 @@ body.welcome-active {
 /* Navbar */
 .navbar {
   background: #ffffff;
-  box-shadow: 0 6px 18px rgba(30, 20, 60, 0.06);
+  box-shadow: 0 4px 18px rgba(30, 20, 60, 0.08);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -80,7 +118,7 @@ body.welcome-active {
 .nav-brand {
   font-size: 24px;
   font-weight: bold;
-  color: #e63b8f;
+  color: #ff4fa3;
   text-shadow: none;
 }
 
@@ -101,8 +139,8 @@ body.welcome-active {
 
 .nav-menu a:hover,
 .nav-menu a.active {
-  background: rgba(230, 59, 143, 0.12);
-  color: #e63b8f;
+  background: rgba(255, 79, 163, 0.12);
+  color: #ff2f95;
   transform: translateY(-2px);
 }
 
@@ -112,13 +150,13 @@ body.welcome-active {
   padding: 60px 20px;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 16px 34px rgba(30, 20, 60, 0.08);
+  box-shadow: 0 10px 30px rgba(32, 24, 60, 0.08);
   margin: 40px 0;
 }
 
 .hero h1 {
   font-size: 48px;
-  color: #e63b8f;
+  color: #ff2f95;
   margin-bottom: 20px;
   text-shadow: none;
 }
@@ -126,7 +164,7 @@ body.welcome-active {
 .hero .description {
   font-size: 18px;
   line-height: 1.8;
-  color: #5f5f5f;
+  color: #5a5a5a;
   max-width: 900px;
   margin: 0 auto;
 }
@@ -143,18 +181,18 @@ body.welcome-active {
   background: white;
   padding: 30px;
   border-radius: 15px;
-  box-shadow: 0 14px 28px rgba(30, 20, 60, 0.08);
+  box-shadow: 0 10px 25px rgba(32, 24, 60, 0.08);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 14px 30px rgba(230, 59, 143, 0.16);
+  box-shadow: 0 12px 28px rgba(255, 47, 149, 0.18);
 }
 
 .feature-card h3 {
-  color: #e63b8f;
+  color: #ff2f95;
   font-size: 24px;
   margin-bottom: 15px;
 }
@@ -167,7 +205,7 @@ body.welcome-active {
 
 /* Button */
 .btn {
-  background: linear-gradient(135deg, #f36fb2 0%, #e63b8f 100%);
+  background: linear-gradient(135deg, #ff6fb3 0%, #ff2f95 100%);
   color: white;
   padding: 12px 30px;
   border: none;
@@ -182,12 +220,12 @@ body.welcome-active {
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(230, 59, 143, 0.28);
+  box-shadow: 0 8px 18px rgba(255, 47, 149, 0.35);
 }
 
 .btn-secondary {
-  background: #f5f5f7;
-  color: #e63b8f;
+  background: #f1f1f6;
+  color: #ff2f95;
   margin-left: 10px;
 }
 
@@ -197,13 +235,13 @@ body.welcome-active {
   padding: 40px 20px;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 16px 34px rgba(30, 20, 60, 0.08);
+  box-shadow: 0 10px 30px rgba(32, 24, 60, 0.08);
   margin-bottom: 40px;
 }
 
 .page-header h1 {
   font-size: 42px;
-  color: #e63b8f;
+  color: #ff2f95;
   margin-bottom: 20px;
 }
 
@@ -212,12 +250,12 @@ body.welcome-active {
   background: white;
   padding: 40px;
   border-radius: 20px;
-  box-shadow: 0 16px 34px rgba(30, 20, 60, 0.08);
+  box-shadow: 0 10px 30px rgba(32, 24, 60, 0.08);
   line-height: 1.8;
 }
 
 .content-section h2 {
-  color: #e63b8f;
+  color: #ff2f95;
   font-size: 28px;
   margin: 30px 0 15px 0;
 }
@@ -245,7 +283,7 @@ body.welcome-active {
   background: white;
   padding: 30px;
   border-radius: 20px;
-  box-shadow: 0 16px 34px rgba(30, 20, 60, 0.08);
+  box-shadow: 0 10px 30px rgba(32, 24, 60, 0.08);
   overflow-x: auto;
 }
 
@@ -255,8 +293,8 @@ table {
 }
 
 thead {
-  background: #fff0f7;
-  color: #b12c6f;
+  background: #ffe3f1;
+  color: #b51666;
 }
 
 th,
@@ -279,11 +317,11 @@ tbody tr:hover {
   height: 60px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #f4b3d2;
+  border: 3px solid #ff9fca;
 }
 
 .action-btn {
-  background: #f36fb2;
+  background: #ff6fb3;
   color: white;
   border: none;
   padding: 8px 15px;
@@ -295,16 +333,16 @@ tbody tr:hover {
 }
 
 .action-btn:hover {
-  background: #e63b8f;
+  background: #ff2f95;
   transform: scale(1.05);
 }
 
 .delete-btn {
-  background: #e63b8f;
+  background: #ff2f95;
 }
 
 .delete-btn:hover {
-  background: #c42a76;
+  background: #d81d7c;
 }
 
 /* Modal */
@@ -326,7 +364,7 @@ tbody tr:hover {
   padding: 40px;
   border-radius: 20px;
   max-width: 600px;
-  box-shadow: 0 18px 40px rgba(30, 20, 60, 0.18);
+  box-shadow: 0 15px 40px rgba(32, 24, 60, 0.2);
   animation: slideDown 0.3s ease;
 }
 
@@ -342,7 +380,7 @@ tbody tr:hover {
 }
 
 .close {
-  color: #e63b8f;
+  color: #ff2f95;
   float: right;
   font-size: 35px;
   font-weight: bold;
@@ -351,11 +389,11 @@ tbody tr:hover {
 }
 
 .close:hover {
-  color: #c42a76;
+  color: #d81d7c;
 }
 
 .modal-content h2 {
-  color: #e63b8f;
+  color: #ff2f95;
   margin-bottom: 25px;
 }
 
@@ -366,7 +404,7 @@ tbody tr:hover {
 
 .form-group label {
   display: block;
-  color: #e63b8f;
+  color: #ff2f95;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -375,7 +413,7 @@ tbody tr:hover {
 .form-group textarea {
   width: 100%;
   padding: 12px;
-  border: 2px solid #f0dbe6;
+  border: 2px solid #f3d4e5;
   border-radius: 10px;
   font-size: 16px;
   transition: border-color 0.3s ease;
@@ -384,7 +422,7 @@ tbody tr:hover {
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #f36fb2;
+  border-color: #ff6fb3;
 }
 
 /* Articles Grid */
@@ -398,13 +436,13 @@ tbody tr:hover {
   background: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 14px 28px rgba(30, 20, 60, 0.08);
+  box-shadow: 0 10px 25px rgba(32, 24, 60, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .article-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 14px 30px rgba(230, 59, 143, 0.16);
+  box-shadow: 0 12px 28px rgba(255, 47, 149, 0.18);
 }
 
 .article-image {
@@ -418,7 +456,7 @@ tbody tr:hover {
 }
 
 .article-content h3 {
-  color: #e63b8f;
+  color: #ff2f95;
   font-size: 22px;
   margin-bottom: 10px;
 }
@@ -437,8 +475,8 @@ tbody tr:hover {
 
 /* Footer */
 footer {
-  background: #ffffff;
-  color: #b12c6f;
+  background: #fff1f7;
+  color: #b51666;
   text-align: center;
   padding: 20px;
   margin-top: 60px;
@@ -448,6 +486,56 @@ footer {
 @keyframes welcomeGlow {
   0% {
     opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes welcomePop {
+  0% {
+    transform: scale(0.85);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes welcomeFade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes titleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes subtitleFade {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes welcomeGlow {
+  0% {
+    opacity: 0;
   }
   100% {
     opacity: 1;
