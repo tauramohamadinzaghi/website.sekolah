@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Guru</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Website Sekolah</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profil.html">Profil Sekolah</a></li>
+                <li><a href="berita.html">Berita Sekolah</a></li>
+                <li><a href="data-guru.html" class="active">Data Guru</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Data Guru</h1>
+            <button class="btn" onclick="showAddTeacherForm()">Tambah Guru</button>
+        </section>
+
+        <div id="teacherModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeTeacherForm()">&times;</span>
+                <h2 id="modalTitle">Tambah Guru</h2>
+                <form id="teacherForm">
+                    <input type="hidden" id="teacherId">
+                    <div class="form-group">
+                        <label>Nama Guru</label>
+                        <input type="text" id="teacherName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Mata Pelajaran</label>
+                        <input type="text" id="teacherSubject" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Foto Guru</label>
+                        <input type="file" id="teacherPhoto" accept="image/*">
+                    </div>
+                    <button type="submit" class="btn">Simpan</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeTeacherForm()">Batal</button>
+                </form>
+            </div>
+        </div>
+
+        <section class="table-section">
+            <table id="teacherTable">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Nama Guru</th>
+                        <th>Mata Pelajaran</th>
+                        <th>Foto</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="teacherTableBody">
+                    <!-- Data will be loaded here by JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Website Sekolah. All rights reserved.</p>
+    </footer>
+
+    <script src="guru.js"></script>
+</body>
+</html>

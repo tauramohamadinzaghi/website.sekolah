@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berita Sekolah</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">Website Sekolah</div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="profil.html">Profil Sekolah</a></li>
+                <li><a href="berita.html" class="active">Berita Sekolah</a></li>
+                <li><a href="data-guru.html">Data Guru</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="page-header">
+            <h1>Berita Sekolah</h1>
+            <button class="btn" onclick="showAddArticleForm()">Tambah Artikel Baru</button>
+        </section>
+
+        <div id="addArticleModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeAddArticleForm()">&times;</span>
+                <h2>Tambah Artikel Baru</h2>
+                <form id="articleForm">
+                    <div class="form-group">
+                        <label>Judul Artikel</label>
+                        <input type="text" id="articleTitle" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Gambar Artikel</label>
+                        <input type="file" id="articleImage" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label>Isi Artikel</label>
+                        <textarea id="articleContent" rows="8" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Simpan Artikel</button>
+                    <button type="button" class="btn btn-secondary" onclick="closeAddArticleForm()">Batal</button>
+                </form>
+            </div>
+        </div>
+
+        <section id="articlesContainer" class="articles-grid">
+            <!-- Articles will be loaded here by JavaScript -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Website Sekolah. All rights reserved.</p>
+    </footer>
+
+    <script src="berita.js"></script>
+</body>
+</html>
