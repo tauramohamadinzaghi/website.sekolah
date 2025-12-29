@@ -4,18 +4,18 @@ function initializeArticles() {
     const sampleArticles = [
       {
         id: 1,
-        title: "Tata Tertib Siswa Tahun Ajaran 2024/2025",
+        title: "Tata Cara Siswa di Lingkungan Sekolah",
         image: "https://placehold.co/400x250?text=Siswa+berbaris+rapi+di+lapangan+upacara+dengan+seragam+lengkap",
         content:
-          "Dalam rangka menjaga kedisiplinan dan kenyamanan belajar, sekolah menetapkan tata tertib yang wajib dipatuhi oleh seluruh siswa. Beberapa poin penting meliputi: datang tepat waktu sebelum pukul 07:00, menggunakan seragam lengkap dan rapi sesuai jadwal, membawa buku dan alat tulis lengkap, menjaga kebersihan lingkungan sekolah, tidak membawa barang berbahaya, dan bersikap sopan kepada guru dan sesama siswa. Pelanggaran terhadap tata tertib akan dikenakan sanksi sesuai tingkat pelanggarannya.",
+          "Untuk menjaga kedisiplinan dan kenyamanan belajar, sekolah menetapkan tata cara siswa yang wajib dipatuhi. Siswa diharapkan datang tepat waktu sebelum pukul 07:00, mengenakan seragam lengkap sesuai jadwal, membawa buku dan alat tulis, menjaga kebersihan kelas serta lingkungan sekolah, tidak membawa barang berbahaya, dan selalu bersikap sopan kepada guru maupun teman. Tata cara ini membantu menciptakan budaya sekolah yang tertib dan saling menghargai.",
         date: "2024-01-15",
       },
       {
         id: 2,
-        title: "Lomba Sains Tingkat Nasional 2024",
-        image: "https://placehold.co/400x250?text=Siswa+melakukan+eksperimen+sains+di+laboratorium",
+        title: "Festival Sains & Inovasi Sekolah 2024",
+        image: "https://placehold.co/400x250?text=Pameran+hasil+projek+sains+di+aula+sekolah",
         content:
-          "Sekolah kami dengan bangga mengumumkan bahwa tim olimpiade sains kita akan mengikuti Lomba Sains Nasional yang akan diselenggarakan bulan depan di Jakarta. Tim yang terdiri dari 10 siswa terpilih telah menjalani persiapan intensif selama 3 bulan terakhir. Mereka akan berkompetisi dalam bidang Matematika, Fisika, Kimia, dan Biologi. Kepala sekolah menyampaikan harapan terbaik dan dukungan penuh untuk tim kita. Mari kita dukung perjuangan mereka!",
+          "Sekolah akan mengadakan Festival Sains & Inovasi pada minggu depan di aula utama. Event ini menampilkan projek penelitian siswa, demo eksperimen, serta pameran karya teknologi sederhana. Selain itu, akan ada talkshow inspiratif bersama alumni berprestasi dan lomba poster ilmiah. Event ini terbuka untuk orang tua dan masyarakat sebagai bentuk apresiasi atas kreativitas siswa.",
         date: "2024-01-10",
       },
       {
